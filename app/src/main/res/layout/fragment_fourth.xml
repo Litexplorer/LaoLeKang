@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.phemie.scnu.laolekang.Fragment.FourthFragment">
+
+
+    <!--顶部大的信息栏-->
+    <RelativeLayout
+        android:id="@+id/tab_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/transparent">
+        <TextView
+            android:id="@+id/txt_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="健康数据 "
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/text_gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <!--第一个-->
+        <TextView
+            android:id="@+id/txt_pperson"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_pperson"
+            android:gravity="center"
+            android:text="个人中心"
+            android:textColor="@drawable/tab_menu_pperson_text" />
+
+        <!--第二个-->
+        <TextView
+            android:id="@+id/txt_mmedicine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_mmedicine"
+            android:gravity="center"
+            android:text="用药提醒"
+            android:textColor="@drawable/tab_menu_mmedicine_text" />
+
+        <!--第三个-->
+        <TextView
+            android:id="@+id/txt_hhome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_hhome"
+            android:gravity="center"
+            android:text="主页"
+            android:textColor="@drawable/tab_menu_hhome_text" />
+
+        <!--第四个-->
+        <TextView
+            android:id="@+id/txt_hhealth"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_hhealth"
+            android:gravity="center"
+            android:text="健康数据"
+            android:textColor="@drawable/tab_menu_hhealth_text" />
+
+        <!--第五个-->
+        <TextView
+            android:id="@+id/txt_ccall"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/tab_menu_bg"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/tab_menu_ccall"
+            android:gravity="center"
+            android:text="紧急呼叫"
+            android:textColor="@drawable/tab_menu_ccall_text" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/tab_menu"
+        android:background="@color/transparent" />
+
+    <com.phemie.scnu.laolekang.CircleImageView
+        android:id="@+id/figure"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_below="@+id/tab_title"
+        android:layout_centerHorizontal="true"
+        app:outCircleColor="#990066"
+        app:outCircleWidth="5dp"
+        app:srcCompat="@drawable/figure" />
+
+    <ImageButton
+        android:id="@+id/rreturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tab_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/rreturn" />
+
+    <ImageButton
+        android:id="@+id/healthheart"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_above="@+id/healthfoot"
+        android:layout_alignStart="@+id/time"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="22dp"
+        android:background="@color/transparent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:srcCompat="@drawable/healthheart" />
+
+    <ImageButton
+        android:id="@+id/healthblood"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/healthheart"
+        android:layout_marginStart="13dp"
+        android:layout_toEndOf="@+id/healthheart"
+        android:background="@color/transparent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:srcCompat="@drawable/healthblood" />
+
+    <ImageButton
+        android:id="@+id/healthfoot"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_above="@+id/div_tab_bar"
+        android:layout_alignStart="@+id/healthheart"
+        android:layout_marginBottom="18dp"
+        android:background="@color/transparent"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:srcCompat="@drawable/healthfoot" />
+
+    <ImageButton
+        android:id="@+id/healthlocation"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_alignStart="@+id/healthblood"
+        android:layout_below="@+id/healthheart"
+        android:background="@color/transparent"
+        android:clickable="true"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        app:srcCompat="@drawable/healthlocation" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_marginStart="19dp"
+        android:layout_toEndOf="@+id/rreturn"
+        android:text="行走时长" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/length"
+        android:layout_alignStart="@+id/length"
+        android:text="行走步数" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/figure"
+        android:text="消耗卡路里" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:hint="2小时43分"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/length"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/healthheart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:hint="333千米"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/energy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/length"
+        android:layout_alignEnd="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:hint="433千米"
+        android:text="" />
+
+
+</RelativeLayout>
