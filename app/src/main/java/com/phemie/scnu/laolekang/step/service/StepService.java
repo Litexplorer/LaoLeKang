@@ -20,7 +20,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
 import com.orhanobut.logger.Logger;
-import com.phemie.scnu.laolekang.Health.StepActivity;
+import com.phemie.scnu.laolekang.Health.Step.StepActivity;
 import com.phemie.scnu.laolekang.R;
 import com.phemie.scnu.laolekang.UpdateUiCallBack;
 import com.phemie.scnu.laolekang.step.accelerometer.StepCount;

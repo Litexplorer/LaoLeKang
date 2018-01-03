@@ -7,7 +7,7 @@
     <LinearLayout
         android:id="@+id/layout_titlebar"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
+        android:layout_height="56dp"
         android:background="@color/colorPrimary"
         android:fitsSystemWindows="true"
         android:orientation="horizontal">
@@ -35,7 +35,7 @@
             android:paddingRight="10px"
             android:text="历史记录"
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="26sp" />
 
 
         <ImageView

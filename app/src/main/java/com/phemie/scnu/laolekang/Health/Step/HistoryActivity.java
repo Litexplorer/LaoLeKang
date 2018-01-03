@@ -1,4 +1,4 @@
-package com.phemie.scnu.laolekang.Health;
+package com.phemie.scnu.laolekang.Health.Step;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
