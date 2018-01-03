@@ -10,7 +10,7 @@
     <RelativeLayout
         android:id="@+id/tab_title"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="56dp"
         android:background="@color/transparent">
         <TextView
             android:id="@+id/txt_top"
@@ -20,8 +20,7 @@
             android:gravity="center"
             android:text="个人中心"
             android:textColor="@color/white"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:textSize="26sp" />
 
         <View
             android:layout_width="match_parent"
@@ -30,15 +29,6 @@
             android:background="@color/text_gray" />
     </RelativeLayout>
 
-    <ImageButton
-        android:id="@+id/rreturn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tab_title"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@color/transparent"
-        app:srcCompat="@drawable/rreturn" />
 
     <LinearLayout
         android:id="@+id/tab_menu"
@@ -125,9 +115,9 @@
         android:id="@+id/personFigure"
         android:layout_width="110dp"
         android:layout_height="110dp"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/tab_title"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="13dp"
         app:srcCompat="@drawable/figure" />
 
     <TextView

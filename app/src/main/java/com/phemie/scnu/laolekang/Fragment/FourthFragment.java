@@ -9,8 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.phemie.scnu.laolekang.Health.MapActivity;
-import com.phemie.scnu.laolekang.Health.StepActivity;
+import com.phemie.scnu.laolekang.Health.HeartRate.HeartRateActivity;
+import com.phemie.scnu.laolekang.Health.Map.MapActivity;
+import com.phemie.scnu.laolekang.Health.Step.StepActivity;
 import com.phemie.scnu.laolekang.R;
 
 public class FourthFragment extends Fragment {
@@ -18,6 +19,7 @@ public class FourthFragment extends Fragment {
     Intent intent;
     private ImageButton location;
     private ImageButton step;
+    private ImageButton heartrate;
     private TextView stepCount;
 
     public FourthFragment() {
@@ -33,6 +35,7 @@ public class FourthFragment extends Fragment {
 
         location = (ImageButton) view.findViewById(R.id.healthlocation);
         step = (ImageButton) view.findViewById(R.id.healthfoot);
+        heartrate = (ImageButton) view.findViewById(R.id.healthheart);
         stepCount = (TextView) view.findViewById(R.id.length);
         intent = getActivity().getIntent();
         stepCount.setText(intent.getStringExtra("步数"));
@@ -53,6 +56,16 @@ public class FourthFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(getActivity(), StepActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        heartrate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), HeartRateActivity.class);
                 startActivity(intent);
             }
         });

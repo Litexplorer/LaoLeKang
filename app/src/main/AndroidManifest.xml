@@ -33,8 +33,7 @@
     <!-- 允许应用读取低级别的系统日志文件 -->
     <uses-permission android:name="android.permission.READ_LOGS" />
 
-
-    <!--计歩-->
+    <!-- 计歩 -->
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
@@ -49,6 +48,13 @@
     <uses-feature
         android:name="android.hardware.sensor.stepdetector"
         android:required="true" />
+
+    <!-- 测心率 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
 
     <application
@@ -66,7 +72,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Health.MapActivity"
+            android:name=".Health.Map.MapActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="sensor" />
 
@@ -77,13 +83,13 @@
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"></service>
-
+            android:process=":remote" />
         <service
             android:name=".step.service.StepService"
             android:priority="1000">
             <intent-filter>
-                <!-- 系统启动完成后会调用-->
+
+                <!-- 系统启动完成后会调用 -->
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
@@ -94,14 +100,15 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Health.StepActivity" />
+        <activity android:name=".Health.Step.StepActivity" />
 
         <service
             android:name=".pedometer.StepsDetectService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <!-- 系统启动完成后会调用-->
+
+                <!-- 系统启动完成后会调用 -->
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.DATE_CHANGED" />
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
@@ -112,8 +119,10 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".Health.HistoryActivity" />
-        <activity android:name=".Health.SetPlanActivity"></activity>
+        <activity android:name=".Health.Step.HistoryActivity" />
+        <activity android:name=".Health.Step.SetPlanActivity" />
+        <activity android:name="org.achartengine.GraphicalActivity" />
+        <activity android:name=".Health.HeartRate.HeartRateActivity"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
-package com.phemie.scnu.laolekang.Health;
+package com.phemie.scnu.laolekang.Health.Map;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.baidu.location.BDLocation;
@@ -17,12 +19,13 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
 import com.phemie.scnu.laolekang.R;
 
-public class MapActivity extends AppCompatActivity {
+public class MapActivity extends AppCompatActivity implements View.OnClickListener {
 
     public TextView locate;
     public String locationDescribe;//当前详细地址描述
     public double Latitude;//当前位置的经度
     public double Longitude;//当前位置的纬度
+    ImageButton rreturn;
     private LocationClient mLocationClient;
     private BaiduMap mBaiduMap;
 
@@ -35,6 +38,9 @@ public class MapActivity extends AppCompatActivity {
         setContentView(R.layout.map_layout);
 
         locate = (TextView) findViewById(R.id.locate);
+        rreturn = (ImageButton) findViewById(R.id.rreturn);
+
+        rreturn.setOnClickListener(this);
 
         // 获取LocationClient
         mLocationClient = new LocationClient(this);
@@ -57,6 +63,16 @@ public class MapActivity extends AppCompatActivity {
 
 
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.rreturn:
+                finish();
+                break;
+        }
+    }
+
 
     @Override
     protected void onDestroy() {
